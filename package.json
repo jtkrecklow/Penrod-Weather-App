@@ -1,0 +1,15 @@
+{
+  "name": "penrod-weather-app",
+  "version": "1.0.0",
+  "description": "Test App for Penrod Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonah Krecklow",
+  "license": "ISC",
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.6.2",
+    "express": "^4.16.3"
+  }
+}
