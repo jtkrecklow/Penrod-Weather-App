@@ -26,7 +26,7 @@ var minneapolisWeather;
 let request = require('request');
 
 
-request('http://api.openweathermap.org/data/2.5/weather?q=milwaukee&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
+request('https://api.openweathermap.org/data/2.5/weather?q=milwaukee&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
     if (err) {
         console.log('error:', error);
     } else {
@@ -44,7 +44,7 @@ request('http://api.openweathermap.org/data/2.5/weather?q=milwaukee&units=imperi
     }
 });
 
-request('http://api.openweathermap.org/data/2.5/weather?q=chicago&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
+request('https://api.openweathermap.org/data/2.5/weather?q=chicago&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
     if (err) {
         console.log('error:', error);
     } else {
@@ -62,7 +62,7 @@ request('http://api.openweathermap.org/data/2.5/weather?q=chicago&units=imperial
     }
 });
 
-request('http://api.openweathermap.org/data/2.5/weather?q=minneapolis&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
+request('https://api.openweathermap.org/data/2.5/weather?q=minneapolis&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
     if (err) {
         console.log('error:', error);
     } else {
@@ -80,7 +80,7 @@ request('http://api.openweathermap.org/data/2.5/weather?q=minneapolis&units=impe
     }
 });
 
-request('http://api.openweathermap.org/data/2.5/weather?q=dallas&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
+request('https://api.openweathermap.org/data/2.5/weather?q=dallas&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
     if (err) {
         console.log('error:', error);
     } else {
