@@ -22,7 +22,7 @@ var milwaukeeWeather;
 var chicagoWeather;
 var dallasWeather;
 var minneapolisWeather;
-/*
+
 let request = require('request');
 
 
@@ -41,7 +41,6 @@ request('http://api.openweathermap.org/data/2.5/weather?q=milwaukee&units=imperi
         milwaukeeCloud = milwaukeeWeather.description;
         milwaukeeHumid = milwaukeeWeather.main.humidity + "%";
         milwaukeePressure = milwaukeeWeather.main.milwaukeePressure;
-        console.log(milwaukeeHumid);
     }
 });
 
@@ -60,7 +59,6 @@ request('http://api.openweathermap.org/data/2.5/weather?q=chicago&units=imperial
         chicagoCloud = chicagoWeather.description;
         chicagoHumid = chicagoWeather.main.humidity + "%";
         chicagoPressure = chicagoWeather.main.chicagoPressure;
-        console.log(chicagoHumid);
     }
 });
 
@@ -79,7 +77,6 @@ request('http://api.openweathermap.org/data/2.5/weather?q=minneapolis&units=impe
         minneapolisCloud = minneapolisWeather.description;
         minneapolisHumid = minneapolisWeather.main.humidity + "%";
         minneapolisPressure = minneapolisWeather.main.minneapolisPressure;
-        console.log(minneapolisHumid);
     }
 });
 
@@ -98,16 +95,15 @@ request('http://api.openweathermap.org/data/2.5/weather?q=dallas&units=imperial&
         dallasCloud = dallasWeather.description;
         dallasHumid = dallasWeather.main.humidity + "%";
         dallasPressure = dallasWeather.main.dallasPressure;
-        console.log(dallasHumid);
     }
 });
 
-*/
+
 
 
 
 document.getElementById('milwaukeeTemp').innerHTML = "Testing";
-document.getElementById('milwaukeeRain').innerHTML = "testings";
+document.getElementById('milwaukeeRain').innerHTML = milwaukeeRain;
 document.getElementById('milwaukeeCloud').innerHTML = milwaukeeCloud;
 document.getElementById('milwaukeeHumid').innerHTML = milwaukeeHumid;
 document.getElementById('milwaukeePressure').innerHTML = milwaukeePressure;
