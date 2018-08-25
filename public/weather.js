@@ -22,6 +22,7 @@ var milwaukeeWeather;
 var chicagoWeather;
 var dallasWeather;
 var minneapolisWeather;
+/*
 let request = require('request');
 
 
@@ -101,12 +102,12 @@ request('http://api.openweathermap.org/data/2.5/weather?q=dallas&units=imperial&
     }
 });
 
-
+*/
 
 
 
 document.getElementById('milwaukeeTemp').innerHTML = "Testing";
-document.getElementById('milwaukeeRain').innerHTML = milwaukeeRain;
+document.getElementById('milwaukeeRain').innerHTML = "testings";
 document.getElementById('milwaukeeCloud').innerHTML = milwaukeeCloud;
 document.getElementById('milwaukeeHumid').innerHTML = milwaukeeHumid;
 document.getElementById('milwaukeePressure').innerHTML = milwaukeePressure;
