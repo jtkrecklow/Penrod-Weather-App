@@ -5,6 +5,7 @@ var port = process.env.PORT || 8080;
 // Serve static files
 app.use(express.static(__dirname + '/public'));
 
+document.getElementById('milwaukeeTemp').innerHTML = "test";
 // Serve your app
 console.log('Served: http://localhost:' + port);
 app.listen(port);
