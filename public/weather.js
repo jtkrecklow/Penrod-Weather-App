@@ -18,18 +18,90 @@ var dallasRain;
 var dallasCloud;
 var dallasHumid;
 var dallasPressure;
+var milwaukeeWeather;
+var chicagoWeather;
+var dallasWeather;
+var minneapolisWeather;
+let request = require('request');
 
 
-Request('http://api.openweathermap.org/data/2.5/weather?q=milwaukee&units=imperial&appid=4fe1c7e65933e930a574065c4246077d',
-    function (error, response, body) {
-        if (error) {
-            milwaukeeTemp = "Error collecting data";
+request('http://api.openweathermap.org/data/2.5/weather?q=milwaukee&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
+    if (err) {
+        console.log('error:', error);
+    } else {
+        milwaukeeWeather = JSON.parse(body);
+        milwaukeeTemp = milwaukeeWeather.main.temp + '°F';
+        if (((milwaukeeWeather.weather.description == "rain") || (milwaukeeWeather.weather.description == "shower rain")) || (milwaukeeWeather.weather.description == "thunderstorm")) {
+            milwaukeeRain = "Currently Raining"
         }
         else {
-            milwaukeeWeather = JSON.parse(body);
-            milwaukeeTemp = milwaukeeWeather.main.temp + "°F";
+            milwaukeeRain = "No Current Rain";
         }
-    });
+        milwaukeeCloud = milwaukeeWeather.description;
+        milwaukeeHumid = milwaukeeWeather.main.humidity + "%";
+        milwaukeePressure = milwaukeeWeather.main.milwaukeePressure;
+        console.log(milwaukeeHumid);
+    }
+});
+
+request('http://api.openweathermap.org/data/2.5/weather?q=chicago&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
+    if (err) {
+        console.log('error:', error);
+    } else {
+        chicagoWeather = JSON.parse(body);
+        chicagoTemp = chicagoWeather.main.temp + '°F';
+        if (((chicagoWeather.weather.description == "rain") || (chicagoWeather.weather.description == "shower rain")) || (chicagoWeather.weather.description == "thunderstorm")) {
+            chicagoRain = "Currently Raining"
+        }
+        else {
+            chicagoRain = "No Current Rain";
+        }
+        chicagoCloud = chicagoWeather.description;
+        chicagoHumid = chicagoWeather.main.humidity + "%";
+        chicagoPressure = chicagoWeather.main.chicagoPressure;
+        console.log(chicagoHumid);
+    }
+});
+
+request('http://api.openweathermap.org/data/2.5/weather?q=minneapolis&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
+    if (err) {
+        console.log('error:', error);
+    } else {
+        minneapolisWeather = JSON.parse(body);
+        minneapolisTemp = minneapolisWeather.main.temp + '°F';
+        if (((minneapolisWeather.weather.description == "rain") || (minneapolisWeather.weather.description == "shower rain")) || (minneapolisWeather.weather.description == "thunderstorm")) {
+            minneapolisRain = "Currently Raining"
+        }
+        else {
+            minneapolisRain = "No Current Rain";
+        }
+        minneapolisCloud = minneapolisWeather.description;
+        minneapolisHumid = minneapolisWeather.main.humidity + "%";
+        minneapolisPressure = minneapolisWeather.main.minneapolisPressure;
+        console.log(minneapolisHumid);
+    }
+});
+
+request('http://api.openweathermap.org/data/2.5/weather?q=dallas&units=imperial&appid=4fe1c7e65933e930a574065c4246077d', function (err, response, body) {
+    if (err) {
+        console.log('error:', error);
+    } else {
+        dallasWeather = JSON.parse(body);
+        dallasTemp = dallasWeather.main.temp + '°F';
+        if (((dallasWeather.weather.description == "rain") || (dallasWeather.weather.description == "shower rain")) || (dallasWeather.weather.description == "thunderstorm")) {
+            dallasRain = "Currently Raining"
+        }
+        else {
+            dallasRain = "No Current Rain";
+        }
+        dallasCloud = dallasWeather.description;
+        dallasHumid = dallasWeather.main.humidity + "%";
+        dallasPressure = dallasWeather.main.dallasPressure;
+        console.log(dallasHumid);
+    }
+});
+
+
 
 
 
